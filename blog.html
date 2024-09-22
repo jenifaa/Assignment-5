@@ -4,8 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#B4F461',
+                'button-colore':'#B4F461',
+                'back-colore': '#F9F7F3',
+                'back2-colore': '#FFFFFF',
+                'card2-colore': '#EFDA6E',
+  
+    
+              },
+            },
+          },
+        }
+      </script>
 </head>
-<body>
+<body class="bg-back-colore">
+     <header>
+            <nav>
+                <div class="h-[100px]">
+                    <div class="navbar w-10/12 mx-auto py-7">
+                        <div class="navbar-start">
+                            <button class="bg-button-colore px-6 py-3 rounded-xl">
+                                <a href="index.html" class="font-bold">Home</a>
+                            </button>
+                            
+                        </div>
+                        
+                        <div class="navbar-center hidden gap-3 lg:flex">
+                          <img src="images/logo.png" alt="">
+                          <p class="font-bold text-xl">Donate Bangladesh</p>
+                        </div>
+        
+                        <div class="navbar-end gap-2">
+                            <img src="images/coin.png" alt="">
+                            <div class="flex items-center gap-2">
+                                <div class="font-bold text-gray-500">5500</div>
+                                <p class="font-bold text-gray-500">BDT</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="bg-white">
+              <div class=" w-10/12 mx-auto mb-10">
+                   <div class="collapse collapse-arrow">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                      <p>hello</p>
+                    </div>
+                   </div>
+                   <div class="collapse collapse-arrow">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                      <p>hello</p>
+                    </div>
+                   </div>
+                   <div class="collapse collapse-arrow">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                      <p>hello</p>
+                    </div>
+                   </div>
+                   <div class="collapse collapse-arrow">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                    <div class="collapse-content">
+                      <p>hello</p>
+                    </div>
+                   </div>
+              </div>
+        </main>
     
 </body>
 </html>
