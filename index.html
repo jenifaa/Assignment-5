@@ -19,7 +19,6 @@
                 'button-colore':'#B4F461',
                 'back-colore': '#F9F7F3',
                 'back2-colore': '#FFFFFF',
-                'card2-colore': '#EFDA6E',
   
     
               },
@@ -31,7 +30,7 @@
 <body class="bg-back-colore pb-10">
     <header>
         <nav>
-            <div class="h-[100px]">
+            <div class="h-[100px] sticky top-0 z-50">
                 <div class="navbar w-10/12 mx-auto py-7">
                     <div class="navbar-start">
                         <button class="bg-button-colore px-6 py-3 rounded-xl">
@@ -60,13 +59,14 @@
 
     <main class="bg-back2-colore">
 
-        <div class="pt-10 gap-4 flex justify-center items-center">
-            <button class="py-4 px-8 bg-button-colore rounded-xl font-bold">Donation</button>
-            <button class="py-4 px-8 border rounded-xl font-bold">History</button>
+        <div class="pt-10 gap-4 flex justify-center items-center sticky top-0">
+            <button id="show-donation" class="py-4 px-8 bg-button-colore rounded-xl font-bold text-black">Donation</button>
+            <button id="history-btn" class="py-4 px-8 border rounded-xl font-bold text-black">History</button>
         </div>
 
 
-        <div class="w-8/12 mx-auto mt-7">
+        <div id="donation-card">
+          <div class="w-8/12 mx-auto mt-7">
             <div class="card card-side bg-base-100 shadow-xl border p-4">
                 <figure class="w-[525px] h-[390px]">
                   <img 
@@ -85,7 +85,23 @@
 
 
                   <div class="card-actions justify-center">
-                    <button id="donation-btn" class="btn w-full bg-button-colore font-bold">Donate Now</button>
+                    <!-- Open the modal using ID.showModal() method -->
+                    <button id="donation-btn" class="btn bg-button-colore w-full" onclick="my_modal_1.showModal()">Donate Now</button>
+                    <dialog id="my_modal_1" class="modal">
+                         <div class="modal-box text-center">
+                        <h3 class="text-2xl font-bold mb-3">Congrates!</h3>
+                        <div class="flex justify-center items-center"><img class="" src="images/coin.png" alt=""></div>
+                        <p class="py-4 text-sm">you have donated for humankind.</p>
+                        <p class="font-bold">Successfully</p>
+                        <div class="modal-action flex justify-center items-center">
+                       <form method="dialog">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn">Close Confirmation</button>
+                       </form>
+                      </div>
+                     </div>
+                   </dialog>
+                      
                   </div>
                 </div>
               </div>
@@ -111,11 +127,26 @@
 
 
                   <div class="card-actions justify-center">
-                    <button id="donation-btn2" class="btn w-full bg-button-colore font-bold">Donate Now</button>
+                    <!-- Open the modal using ID.showModal() method -->
+                        <button id="donation-btn2" class="btn bg-button-colore w-full" onclick="my_modal_5.showModal()">Donate Now</button>
+                           <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                          <div class="modal-box text-center">
+                            <h3 class="text-2xl font-bold mb-3">Congrates!</h3>
+                            <div class="flex justify-center items-center"><img class="" src="images/coin.png" alt=""></div>
+                            <p class="py-4 text-sm">you have donated for humankind.</p>
+                            <p class="font-bold">Successfully</p>
+                            <div class="modal-action flex justify-center items-center">
+                            <form method="dialog">
+                          <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close Confirmation</button>
+                            </form>
+                                </div>
+                                    </div>
+                                  </dialog>
+                               </div>
+                       </div>
                   </div>
-                </div>
-              </div>
-        </div>
+          </div>
 
 
         <div class="w-8/12 mx-auto mt-7">
@@ -137,21 +168,38 @@
 
 
                   <div class="card-actions justify-center">
-                    <button id="donation-btn3" class="btn w-full bg-button-colore font-bold">Donate Now</button>
+                    <!-- The button to open modal -->
+                      <label id="donation-btn3" for="my_modal_6" class="btn bg-button-colore w-full">Donate Now</label>
+
+                     
+                    <input type="checkbox" id="my_modal_6" class="modal-toggle" />
+                   <div class="modal" role="dialog">
+                     <div class="modal-box text-center">
+                      <h3 class="text-2xl font-bold mb-3">Congrates!</h3>
+                      <div class="flex justify-center items-center"><img class="" src="images/coin.png" alt=""></div>
+                      <p class="py-4 text-sm">you have donated for humankind.</p>
+                      <p class="font-bold">Successfully</p>
+                     <div class="modal-action flex justify-center items-center">
+                        <label for="my_modal_6" class="btn">Close confirmation</label>
+                      </div>
+                    </div>
+                   </div>
                   </div>
                 </div>
               </div>
         </div>
 
-        <div>
+        </div>
+        <div id="history" class="w-10/12 mx-auto">
 
         </div>
     </main>
-    <script src="js/utilities.js"></script>
 
-
-    <script src="js/addMoney.js"></script>
+    
     <script src="js/features.js"></script>
+    <script src="js/addMoney.js"></script>
+    <script src="js/utilities.js"></script>
+    
     
 </body>
 </html>
