@@ -6,7 +6,16 @@ const historyCards = {
   };
   function makeHistory(cardId, moneyAmount)
   {
-    const date = new Date().toLocaleString();
+    const objects = {
+        year : 'numeric',
+        month : 'long',
+        day : 'numeric',
+        hour : '2-digit',
+        minute : '2-digit',
+        second : '2-digit',
+        timeZone : 'Asia/Dhaka'
+    }
+    const date = new Date().toString('en-US',objects);
     historyCards[cardId].push({moneyAmount, date});
   }
   function updateHistory(){
@@ -25,7 +34,7 @@ const historyCards = {
         div.classList.add('border' , 'p-5' , 'rounded-xl', 'mb-3');
         div.innerHTML = `
         <p class="font-bold mb-3">${historyCard.moneyAmount} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-        <p>Date : ${historyCard.date}</p>
+        <p class="text-gray-500 text-sm">Date : ${historyCard.date}</p>
 
         `;
         card1History.appendChild(div);
