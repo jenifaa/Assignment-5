@@ -28,9 +28,9 @@
       </script>
 </head>
 <body class="bg-back-colore pb-10">
-    <header>
+    <header class="sticky top-0 z-50 bg-back-colore">
         <nav>
-            <div class="h-[100px] sticky top-0 z-50">
+            <div >
                 <div class="navbar w-10/12 mx-auto py-7">
                     <div class="navbar-start">
                         <button class="bg-button-colore px-6 py-3 rounded-xl">
@@ -55,24 +55,27 @@
                 </div>
             </div>
         </nav>
+        <div class="pt-10 gap-4 flex justify-center items-center bg-white pb-4">
+          <button id="show-donation" class="py-4 px-8 bg-button-colore rounded-xl font-bold ">Donation</button>
+          <button id="history-btn" class="py-4 px-8 border rounded-xl font-bold">History</button>
+      </div>
     </header>
 
     <main class="bg-back2-colore">
 
-        <div class="pt-10 gap-4 flex justify-center items-center sticky top-0">
-            <button id="show-donation" class="py-4 px-8 bg-button-colore rounded-xl font-bold text-black">Donation</button>
-            <button id="history-btn" class="py-4 px-8 border rounded-xl font-bold text-black">History</button>
-        </div>
+       
 
 
         <div id="donation-card">
-          <div class="w-8/12 mx-auto mt-7">
-            <div class="card card-side bg-base-100 shadow-xl border p-4">
-                <figure class="w-[525px] h-[390px]">
-                  <img 
-                    src="images/noakhali.png"
-                    alt="" />
-                </figure>
+          <div class="w-8/12 mx-auto">
+            <div class="card card-side bg-base-100 shadow-xl border p-4 grid grid-cols-1 lg:flex">
+                <div>
+                  <figure class="lg:w-[525px] lg:h-[390px]">
+                    <img 
+                      src="images/noakhali.png"
+                      alt="" />
+                  </figure>
+                </div>
                 <div class="card-body">
                     <button class="btn w-[140px] flex items-center gap-2">
                         <img src="images/coin.png" alt="">
@@ -86,7 +89,7 @@
 
                   <div class="card-actions justify-center">
                     <!-- Open the modal using ID.showModal() method -->
-                    <button id="donation-btn" class="btn bg-button-colore w-full" onclick="my_modal_1.showModal()">Donate Now</button>
+                    <button id="donation-btn" class="btn bg-button-colore w-full">Donate Now</button>
                     <dialog id="my_modal_1" class="modal">
                          <div class="modal-box text-center">
                         <h3 class="text-2xl font-bold mb-3">Congrates!</h3>
@@ -96,7 +99,7 @@
                         <div class="modal-action flex justify-center items-center">
                        <form method="dialog">
                           <!-- if there is a button in form, it will close the modal -->
-                          <button class="btn">Close Confirmation</button>
+                          <button id="close-modal-btn" class="btn">Close Confirmation</button>
                        </form>
                       </div>
                      </div>
@@ -108,9 +111,9 @@
         </div>
 
 
-        <div class="w-8/12 mx-auto mt-7">
-            <div class="card card-side bg-base-100 shadow-xl border p-4">
-                <figure class="w-[525px] h-[390px]">
+         <div class="w-8/12 mx-auto mt-7">
+            <div class="card card-side bg-base-100 shadow-xl border p-4 grid grid-cols-1 lg:flex">
+                <figure class="lg:w-[525px] lg:h-[390px]">
                   <img 
                     src="images/feni.png"
                     alt="" />
@@ -121,37 +124,36 @@
                         <div id="available-balance2" class="font-bold text-gray-500">600</div>
                         <div class="font-bold text-gray-500">BDT</div>
                     </button>
-                  <h2 class="card-title font-bold mb-3">Donate for Flood Relief in Feni,Bangladesh</h2>
-                  <p class="text-xs text-gray-500"> The recent floods in Feni have devastated local communities, leading to severe <br> disruption and loss. Your generous donation will help  provide immediate aid, <br> including food, clean water, and medical supplies, to those affected by <br> this calamity. Together, we can offer  crucial support and <br> help rebuild lives  in the aftermath of this disaster.  Every contribution <br> counts towards  making a real difference. Please consider donating today to assist those in urgent need..</p>
-                  <input id="donation-amount2" type="text" placeholder="Write Donation Amount" class="border p-3 rounded-xl">
+                    <h2 class="card-title font-bold mb-3">Donate for Flood Relief in Feni,Bangladesh</h2>
+                    <p class="text-xs text-gray-500"> The recent floods in Feni have devastated local communities, leading to severe <br> disruption and loss. Your generous donation will help  provide immediate aid, <br> including food, clean water, and medical supplies, to those affected by <br> this calamity. Together, we can offer  crucial support and <br> help rebuild lives  in the aftermath of this disaster.  Every contribution <br> counts towards  making a real difference. Please consider donating today to assist those in urgent need..</p>
+                   <input id="donation-amount2" type="text" placeholder="Write Donation Amount" class="border p-3 rounded-xl">
 
 
-                  <div class="card-actions justify-center">
+                   <div class="card-actions justify-center">
                     <!-- Open the modal using ID.showModal() method -->
-                        <button id="donation-btn2" class="btn bg-button-colore w-full" onclick="my_modal_5.showModal()">Donate Now</button>
+                        <button id="donation-btn2" class="btn bg-button-colore w-full">Donate Now</button>
                            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                          <div class="modal-box text-center">
-                            <h3 class="text-2xl font-bold mb-3">Congrates!</h3>
-                            <div class="flex justify-center items-center"><img class="" src="images/coin.png" alt=""></div>
-                            <p class="py-4 text-sm">you have donated for humankind.</p>
-                            <p class="font-bold">Successfully</p>
-                            <div class="modal-action flex justify-center items-center">
-                            <form method="dialog">
-                          <!-- if there is a button in form, it will close the modal -->
-                            <button class="btn">Close Confirmation</button>
-                            </form>
-                                </div>
-                                    </div>
-                                  </dialog>
+                             <div class="modal-box text-center">
+                                <h3 class="text-2xl font-bold mb-3">Congrates!</h3>
+                                <div class="flex justify-center items-center"><img class="" src="images/coin.png" alt=""></div>
+                                <p class="py-4 text-sm">you have donated for humankind.</p>
+                               <p class="font-bold">Successfully</p>
+                               <div class="modal-action flex justify-center items-center">
+                                  <form method="dialog">
+                                    <button id="close-modal-btn2" class="btn">Close Confirmation</button>
+                                  </form>
                                </div>
-                       </div>
-                  </div>
+                            </div>
+                          </dialog>
+                     </div>
+               </div>
+            </div>
           </div>
 
 
         <div class="w-8/12 mx-auto mt-7">
-            <div class="card card-side bg-base-100 shadow-xl border p-4">
-                <figure class="w-[525px] h-[390px]">
+            <div class="card card-side bg-base-100 shadow-xl border p-4 grid grid-cols-1 lg:flex">
+                <figure class="lg:w-[525px] lg:h-[390px]">
                   <img 
                     src="images/quota-protest.png"
                     alt="" />
@@ -169,18 +171,18 @@
 
                   <div class="card-actions justify-center">
                     <!-- The button to open modal -->
-                      <label id="donation-btn3" for="my_modal_6" class="btn bg-button-colore w-full">Donate Now</label>
+                      <button id="donation-btn3"  class="btn bg-button-colore w-full">Donate Now</button>
 
                      
-                    <input type="checkbox" id="my_modal_6" class="modal-toggle" />
-                   <div class="modal" role="dialog">
+                      <dialog id="my_modal_6" class="modal modal-bottom sm:modal-middle">
+                      <!-- <div class="modal" role="dialog"> -->
                      <div class="modal-box text-center">
                       <h3 class="text-2xl font-bold mb-3">Congrates!</h3>
                       <div class="flex justify-center items-center"><img class="" src="images/coin.png" alt=""></div>
                       <p class="py-4 text-sm">you have donated for humankind.</p>
                       <p class="font-bold">Successfully</p>
                      <div class="modal-action flex justify-center items-center">
-                        <label for="my_modal_6" class="btn">Close confirmation</label>
+                        <button id="close-modal-btn3" class="btn">Close confirmation</button>
                       </div>
                     </div>
                    </div>
@@ -190,7 +192,20 @@
         </div>
 
         </div>
-        <div id="history" class="w-10/12 mx-auto">
+
+
+
+        <div id="history" class="w-10/12 mx-auto  hidden">
+          <div id="card1-history">
+
+
+          </div>
+          <div id="card2-history">
+
+          </div>
+          <div id="card3-history">
+
+          </div>
 
         </div>
     </main>
